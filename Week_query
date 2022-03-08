@@ -1,0 +1,7 @@
+Monday -> SELECT to_char(date_trunc('week', now()::timestamp), 'YYYYMMDD');
+Tuesday-> SELECT to_char((date_trunc('week', now()::timestamp)+ '1 days'::interval)::date, 'YYYYMMDD');
+Wednesday -> SELECT to_char((date_trunc('week', now()::timestamp)+ '2 days'::interval)::date, 'YYYYMMDD');
+Thursday -> SELECT to_char((date_trunc('week', now()::timestamp)+ '2 days'::interval)::date, 'YYYYMMDD');
+Friday -> SELECT to_char((date_trunc('week', now()::timestamp)+ '2 days'::interval)::date, 'YYYYMMDD');
+Saturday -> SELECT to_char((date_trunc('week', now()::timestamp)+ '2 days'::interval)::date, 'YYYYMMDD');
+Sunday -> SELECT to_char((date_trunc('week', now()::timestamp)+ '2 days'::interval)::date, 'YYYYMMDD');
