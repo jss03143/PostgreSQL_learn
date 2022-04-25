@@ -1,0 +1,7 @@
+select coalesce(max(seq), 0) + 1 from 테이블위치
+
+다음 내용으로도 가능하지만 동시 처리할 시 seq 중복 에러가 나올 수 있음.
+
+해당 내용을 해결하기 위해 DB에서 키값(seq)을 주고, 자동으로 세팅되도록 설정하면 동시 처리가 되어도 가능. 
+
+seq에 Default = nextval('테이블_seq위치'::regclass) 추가.
